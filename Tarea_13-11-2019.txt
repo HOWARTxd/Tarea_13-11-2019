@@ -1,0 +1,17 @@
+Que significa las iniciales de los discos:
+•SSD:
+  Solid State Drive
+•SAS:
+  Serial Attached SCSI
+•SATA:
+  Serial Advanced Technology Attachment
+•SCSI:
+  Small Computer System Interface
+
+  Memoria Flash NAND
+  En la memoria Flash NAND, los transistores se conectan en serie entre ellos. Este tipo de memoria
+  accede a las direcciones de memoria de las células en el orden de «pagina», » palabra» y, finalmente «bit».
+  Un tipo de memoria Flash más sencilla de contruir, permite aumentar la densidad de transistores por célula
+  de meoria yh, por tanto, células de memoria que son capaces de almacenar muchos más datos.
+  También tiene una capacidad de grabar datos a una velocidad sensiblemente rápida. Tipo de memoria Flash
+  que es más permisiva si una célula de memoria no es completamente perfecta.
