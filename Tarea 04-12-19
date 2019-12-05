@@ -1,0 +1,81 @@
+CODIGO  EN CMD QUE HACE HABLAR A LA COMPUTADORA CON EL MENSAJE "TI COMPUTADORA SE APAGARA EN 30 SEGUNDOS" , HAGA UN TEMPORALIZADOR DE 30 A 0, 
+HAGA UN SONIDO DE BEEP DURANRATE CADA SEGUNDO Y FINALMENTE SE APAGUE EL EQUIPO.
+
+ABRE UN NUEVO BLOC DE NOTAS Y ESTE AGREGARAS  EL SIGUIENTE CODIGO :
+StrText=("Tu equipo se apagara en 30 segundos" ) 
+set ObjVoice = CreateObject("SAPI.SpVoice" ) 
+ObjVoice.Speak StrText 
+•Una vez lo guardado agregar la extecion ".vbs"
+
+NUEVAMENTE CREA UN NUEVO BLOCK DE NOTAS  ESTE PARA PRODUCIR EL  LOOP:
+
+@echo off
+rem /// sound beep
+
+set /a counter=0
+:Loop
+ set /a counter=%counter% + 1
+ rundll32 user32.dll,MessageBeep
+ timeout /t 1 >nul
+ if %counter% equ 5 goto :exit
+ goto :Loop
+
+:exit
+
+pause
+
+exit
+
+A ESTE LE LO GUARDARAS CON LA EXTENCION .bat
+
+POR ULTIMO  CREARAS UN NUEVO ARCHIVO EN BLOC DE NOTAS CON LA TERMINACION .bat YESCRIBIRAS CLO SIGUIENTE:
+
+@echo off
+rem countdown for 10 sec
+    setlocal enableextensions enabledelayedexpansion
+
+    for /f %%a in ('copy "%~f0" nul /z') do set "CR=%%a"
+
+rem --- Variable counter set to 31
+set /a counter=31
+
+rem --- Initial message
+ <nul set /p ".=Hola, tu equipo se apagara en 30 segundos !CR!"
+
+rem --- Voice message
+Voz.vbs
+
+:Loop
+ rem --- Decrement var counter -1
+ set /a counter=%counter% - 1 
+
+ rem --- Updating display
+ <nul set /p ".=Hola, tu equipo se apagara en !counter! segundos  !CR!"
+
+ rem --- PC Beeper
+ rundll32 user32.dll,MessageBeep
+
+ rem --- Wait for 1 second
+ timeout /t 1 >nul
+
+ rem --- Counter = 0 then exit
+ if %counter% equ 0 goto :exit
+
+ rem --- else...loop
+ goto :Loop
+
+:exit
+
+pause
+shutdown -s -t 00
+exit
+
+NOTTA: CADA REM ES UN COMENTARIO PARA QUE ENTIENDAS LO Q SUCEDE
+
+
+
+TAREA 2 
+¿Qué es el formato «RAW» de una unidad o una tarjeta de memoria?
+Al conectar cualquier dispositivo de almacenamiento de datos al ordenador personal, el sistema operativo «Windows», utilizando sus propios controladores y configuraciones internas, determina su sistema de archivos y prepara el dispositivo para su pleno funcionamiento. Si por alguna causa, «Windows» no puede determinar el sistema de archivos del dispositivo, se le asigna la etiqueta «RAW».
+
+
